@@ -11,9 +11,16 @@ bot.message do |bm|
   p ("ユーザーID : #{bm.user.id}")
   p ("メッセージ : #{bm.content}")
   p "------------------------------------"
-  if bm.user.id === 351323974703251456
-    bm.respond "かつやは死んでね"
+  if bm.user.id === 351323974703251456 #かつや
+    # bm.respond "かつやは死んでね"
+  elsif bm.user.id === 325812579392028674 #ぶっち
+    # bm.respond "ぶっちんこｗｗｗ"
+  elsif bm.user.id === 269453299743195137 #おかっち
+    # bm.respond "叙々苑!?"
+  elsif bm.user.id === 308880612914233344 #しおん
+    # bm.respond "小森　純"
   end
+  p bm
 end
 
 bot.run
