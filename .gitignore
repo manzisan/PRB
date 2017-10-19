@@ -1,1 +1,3 @@
 /node_modules
+/token.erb
+/chat-log.txt
