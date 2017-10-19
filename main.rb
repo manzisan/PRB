@@ -2,8 +2,9 @@ require 'discordrb'
 require 'date'
 require 'twitter'
 require 'net/ping'
-# require 'FileUtils'
 
+# for Token
+require '/token'
 
 # Discord BOT Token
 bot = Discordrb::Bot.new token: 'MzcwMDMyMzkyMTU4NTc2NjQw.DMjHhg.qmoKjIrGvinDEXBg8AJilMvyLmM', client_id: 370032392158576640
