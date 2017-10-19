@@ -11,6 +11,15 @@ bot = Discordrb::Bot.new token: @d_token, client_id: @id
 
 
 bot.message do |bm|
+
+  # 取得可能データ一覧
+  # bm.user.id => ID
+  # bm.content => メッセージ単体
+  # bm.user.name => ユーザー名
+  # bm.timestamp => メッセージ送信時間
+  # bm.channel =>　利用中チャンネル
+
+
   # *----------  ログとして出力  ----------*/
   # @file = "/chat-log.txt"
   # FileUtils.chmod(777, @file)
@@ -45,7 +54,6 @@ bot.message do |bm|
 
     # *----------  Pingテスト  ----------*/
     if pinger.ping?
-      # bm.send_message ("#{time}現在、PUBGサーバーは正常稼動中です。")
       bm.send_message ("#{time}現在、PUBGサーバーは正常稼動中です。")
     else
       bm.send_message ("#{time}現在、サーバーがダウンしています")
@@ -60,21 +68,17 @@ bot.message do |bm|
   p ("タイムスタンプ : #{bm.timestamp.localtime.strftime("%m月 %d日 %H:%M:%S")}")
   p "------------------------------------"
 
-  if bm.content === "かつや"
-    bm.send_message "PUBG下手くそな人だ！"
-  end
-
   # 特定のユーザーにコメントを送り返す
   if bm.user.id === 351323974703251456 #かつや
     # bm.respond "かつくんって呼ばれると勃ちます"
   elsif bm.user.id === 325812579392028674 #ぶっち
     # bm.respond "ぶっち童貞捨てた？"
   elsif bm.user.id === 269453299743195137 #おかっち
-    # bm.respond "叙々苑!?"
+    bm.respond "叙々苑!?"
   elsif bm.user.id === 308880612914233344 #しおん
     # bm.respond "小森　純です"
   elsif bm.user.id === 355359958415704065 #なるさま
-    # bm.respond "またスケベしてきたのか"
+    bm.respond "またスケベしてきたのか"
   end
 end
 
