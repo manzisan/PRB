@@ -1,4 +1,4 @@
-# Awesome-name
+# PUBG availability and Room availability BOT
 
 ![Badge Status](https://ci-as-a-service)
 
@@ -40,9 +40,7 @@ For more information, see `awesome-tool --help`.
 
 ## Anything Else
 
-AnythingAnythingAnything
-AnythingAnythingAnything
-AnythingAnythingAnything
+  https://discordapp.com/oauth2/authorize?&client_id=<CLIENT ID>&scope=bot&permissions=0
 
 ## Author
 

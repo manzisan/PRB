@@ -1,6 +1,8 @@
+# for gem install
 require 'discordrb'
-require 'date'
 require 'twitter'
+
+require 'date'
 require 'net/ping'
 
 # for Token's
@@ -9,29 +11,29 @@ require './token'
 # Discord BOT
 bot = Discordrb::Bot.new token: @d_token, client_id: @id
 
-
+# get message
 bot.message do |bm|
 
-  # 取得可能データ一覧
+  # get API Data
   # bm.user.id => ID
-  # bm.content => メッセージ単体
-  # bm.user.name => ユーザー名
-  # bm.timestamp => メッセージ送信時間
-  # bm.channel =>　利用中チャンネル
+  # bm.content => Message
+  # bm.user.name => User Name
+  # bm.timestamp => Time Stamp
+  # bm.channel =>　Using Channel
 
-
-  # *----------  ログとして出力  ----------*/
+  # *----------  Puts log  ----------*/
   # @file = "/chat-log.txt"
   # FileUtils.chmod(777, @file)
   # File.open(@file, "w") do |f|
   #   f.puts "------------------------------------"
-  #   f.puts ("ユーザー名 : #{bm.user.name}")
-  #   f.puts ("ユーザーID : #{bm.user.id}")
-  #   f.puts ("メッセージ : #{bm.content}")
-  #   f.puts ("タイムスタンプ : #{bm.timestamp.localtime}")
+  #   f.puts ("User Name : #{bm.user.name}")
+  #   f.puts ("User Id : #{bm.user.id}")
+  #   f.puts ("Message : #{bm.content}")
+  #   f.puts ("Time Stamp : #{bm.timestamp.localtime.strftime("%m月 %d日 %H:%M:%S")}")
   #   f.puts "------------------------------------"
   # end
 
+  # puts pubg status
   if bm.content === "pubg"
     @client = Twitter::REST::Client.new do |config|
       config.consumer_key    = @key
@@ -40,19 +42,19 @@ bot.message do |bm|
       config.access_token_secret = @secret_token
     end
 
-    # *----------  PUBGのtimeline取得  ----------*/
+    # *----------  get PUBG timeline  ----------*/
     @client.user_timeline("PUBG_JAPAN",count: 1).each do |timeline|
       bm.send_message @client.status(timeline.id).text
     end
 
-    # *----------  確認したいpingの宛先を指定  ----------*/
+    # *----------  ping list  ----------*/
     # addr = Array("13.112.63.251","46.51.255.254") #PUBG Tokyo server's IP
     addr = "13.112.63.251"
     pinger = Net::Ping::External.new(addr)
 
     time = Time.now.localtime.strftime("%m月 %d日 %H:%M:%S")
 
-    # *----------  Pingテスト  ----------*/
+    # *----------  Ping  ----------*/
     if pinger.ping?
       bm.send_message ("#{time}現在、PUBGサーバーは正常稼動中です。")
     else
@@ -60,15 +62,15 @@ bot.message do |bm|
     end
   end 
   
-  # メッセージを送ったユーザーのデータを取得
+  # get user status
   p "------------------------------------"
-  p ("ユーザー名 : #{bm.user.name}")
-  p ("ユーザーID : #{bm.user.id}")
-  p ("メッセージ : #{bm.content}")
-  p ("タイムスタンプ : #{bm.timestamp.localtime.strftime("%m月 %d日 %H:%M:%S")}")
+  p ("User Name : #{bm.user.name}")
+  p ("User Id : #{bm.user.id}")
+  p ("Message : #{bm.content}")
+  p ("Time Stamp : #{bm.timestamp.localtime.strftime("%m月 %d日 %H:%M:%S")}")
   p "------------------------------------"
 
-  # 特定のユーザーにコメントを送り返す
+  # Reply for specific user
   if bm.user.id === 351323974703251456 #かつや
     # bm.respond "かつくんって呼ばれると勃ちます"
   elsif bm.user.id === 325812579392028674 #ぶっち
