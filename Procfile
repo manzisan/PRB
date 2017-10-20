@@ -1,1 +1,1 @@
-web: ruby prb.rb
+web: bundle exec rails server -p $PORT
