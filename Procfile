@@ -1,1 +1,1 @@
-web: bundle exec ruby prb.rb
+web: ruby prb.rb
