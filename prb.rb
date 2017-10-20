@@ -9,6 +9,8 @@ require 'net/ping'
 # for Token's
 require './token'
 
+print "Working..."
+
 # create Discord BOT
 bot = Discordrb::Bot.new token: @d_token, client_id: @id
 
