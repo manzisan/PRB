@@ -28,10 +28,9 @@ bot.message do |bm|
     File.chmod(0777, "chat-log.txt")
     File.open("chat-log.txt", "a") do |f|
       f.puts "------------------------------------"
-      f.puts ("User Name : #{bm.user.name}")
-      f.puts ("User Id : #{bm.user.id}")
-      f.puts ("Message : #{bm.content}")
-      f.puts ("Time Stamp : #{bm.timestamp.localtime.strftime("%m月 %d日 %H:%M:%S")}")
+      f.puts ("ユーザー名 : #{bm.user.name}")
+      f.puts ("メッセージ : #{bm.content}")
+      f.puts ("時刻 : #{bm.timestamp.localtime.strftime("%m月 %d日 %H:%M:%S")}")
       f.puts "------------------------------------"
     end
 
