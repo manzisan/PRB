@@ -36,7 +36,7 @@ For more information, see `awesome-tool --help`.
 
 ## Installation
 
-    $ git clone https://github.com/b4b4r07/awesome-tool
+  $ git clone https://github.com/b4b4r07/awesome-tool
 
 ## Anything Else
 
@@ -44,8 +44,6 @@ For more information, see `awesome-tool --help`.
 
 ## Author
 
-[@b4b4r07](https://twitter.com/b4b4r07)
 
 ## License
 
-[MIT](http://b4b4r07.mit-license.org)
