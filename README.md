@@ -1,6 +1,7 @@
 # PUBG availability and Room availability BOT
 
   How to Use
+
   1. Add this Using Channel or Bot
   2. Send to message "pubg" or "watch"
 
@@ -10,9 +11,9 @@
 
 ## Features
 
-- room availability for Discord
-- failed to sending regularly ping status
-- another command
+- Room availability for Discord
+- GET status to failed sending on regularly ping
+- Another command
 
 ## License
 
