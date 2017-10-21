@@ -5,7 +5,7 @@
   1. Add this for Using Channel or Bot
   2. Send to message `pubg` or `watch`
   
-  `PUBG`
+  `pubg`
     Check to ping and Twitter
   `watch`
     Check to new Tweet and regularly send to ping
