@@ -7,6 +7,7 @@
   
   `pubg`
     Check to ping and Twitter
+    
   `watch`
     Check to new Tweet and regularly send to ping
     
