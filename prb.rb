@@ -1,6 +1,5 @@
 require 'date'
 require 'net/ping'
-
 # for Token's
 require 'discordrb'
 require 'twitter'
