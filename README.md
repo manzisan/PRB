@@ -1,49 +1,25 @@
 # PUBG availability and Room availability BOT
 
-![Badge Status](https://ci-as-a-service)
+  How to Use
 
-OverviewOverviewOverview
-
-## Description
-
-DescriptionDescriptionDescription
-DescriptionDescriptionDescription
-DescriptionDescriptionDescription
-
-***DEMO:***
-
-![Demo](https://image-url.gif)
-
-## Features
-
-- Awesome function
-- Awesome UI
-- ...
-
-For more information, see `awesome-tool --help`.
-
-## Requirement
-
-- Requirement
-- Requirement
-- Requirement
-
-## Usage
-
-1. Usage
-2. Usage
-3. Usage
-
+  1. Add this for Using Channel or Bot
+  2. Send to message `pubg` or `watch`
+  
+  `pubg`
+    Check to ping and Twitter
+  `watch`
+    Check to new Tweet and regularly send to ping
+    
 ## Installation
 
-  $ git clone https://github.com/b4b4r07/awesome-tool
+  https://discordapp.com/oauth2/authorize?client_id=370463940876042240&scope=bot
 
-## Anything Else
+## Issues
 
-  https://discordapp.com/oauth2/authorize?&client_id=<CLIENT ID>&scope=bot&permissions=0
-
-## Author
-
+- Room availability for Discord
+- GET status to failed sending on regularly send to ping
+- Another command
 
 ## License
 
+ copyright 2017 manzisan

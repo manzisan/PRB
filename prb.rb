@@ -1,12 +1,9 @@
-# for gem install
-require 'discordrb'
-require 'twitter'
-
-# for require only
 require 'date'
 require 'net/ping'
 
 # for Token's
+require 'discordrb'
+require 'twitter'
 require './token'
 
 # create Discord BOT
@@ -14,7 +11,6 @@ bot = Discordrb::Bot.new token: @d_token, client_id: @id
 
 # Keep current tweet
 current = ""
-flag = 1
 
 # for ping
 addr = "13.112.63.251"
@@ -79,15 +75,14 @@ bot.message do |bm|
     if bm.user.id === 351323974703251456 #かつや
       # bm.send_message ""
     elsif bm.user.id === 325812579392028674 #ぶっち
-      bm.send_message "うるせぐすな"
+      # bm.send_message "うるせぐすな"
     elsif bm.user.id === 269453299743195137 #おかっち
-      bm.send_message "叙々苑!?"
+      # bm.send_message "叙々苑!?"
     elsif bm.user.id === 308880612914233344 #しおん
       # bm.send_message ""
     elsif bm.user.id === 355359958415704065 #なるさま
       bm.send_message "またスケベしてきたのか"
     end
-
 end
 
 bot.run
